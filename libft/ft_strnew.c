@@ -6,7 +6,7 @@
 /*   By: tmack <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/05 16:05:04 by tmack             #+#    #+#             */
-/*   Updated: 2016/06/05 16:05:07 by tmack            ###   ########.fr       */
+/*   Updated: 2016/08/25 10:42:53 by tmack            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char			*ft_strnew(size_t size)
 {
-	return (ft_memalloc(size + 1));
+	return ((char *)ft_memalloc(size));
 }

@@ -6,11 +6,9 @@
 /*   By: tmack <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/05 16:06:41 by tmack             #+#    #+#             */
-/*   Updated: 2016/07/28 15:46:47 by tmack            ###   ########.fr       */
+/*   Updated: 2016/11/07 08:25:36 by tmack            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
@@ -55,15 +53,18 @@ char			**ft_strsplit(char const *str, char c)
 	int		i;
 
 	i = 0;
+	if (str == NULL)
+		return (NULL);
 	nbr_words = ft_count_parts((const char *)str, c);
-	t = (char **)malloc(sizeof(*t) * (ft_count_parts((const char *)str, c) + 1));
+	t = (char **)malloc(sizeof(*t) * ((nbr_words) + 1));
 	if (t == NULL)
 		return (NULL);
 	while (nbr_words--)
 	{
 		while (*str == c && *str != '\0')
 			str++;
-		t[i] = ft_strsub((const char *)str, 0, ft_word_len((const char *)str, c));
+		t[i] = ft_strsub((const char *)str, 0,
+				ft_word_len((const char *)str, c));
 		if (t[i] == NULL)
 			return (NULL);
 		str = str + ft_word_len(str, c);

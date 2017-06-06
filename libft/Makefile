@@ -6,24 +6,23 @@
 #    By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/04 17:52:57 by tfleming          #+#    #+#              #
-#    Updated: 2016/10/24 11:43:08 by tmack            ###   ########.fr        #
+#    Updated: 2016/12/06 16:19:32 by tmack            ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME =			libft.a
 
 CC =			gcc
-FLAGS =			-Wall -Werror -Wextra -g3
+FLAGS =			-Wall -Werror -Wextra
 INCLUDES =		"includes"
 
-COMPILED =		ft_free_2.o \
-				ft_islower.o \
-				tmack_header.o \
+COMPILED =		ft_islower.o \
 				ft_isupper.o \
 				ft_tolower.o \
 				ft_toupper.o \
 				ft_isdigit.o \
 				ft_isalnum.o \
+				ft_isalpha.o \
 				ft_isascii.o \
 				ft_isprint.o \
 				ft_isspace.o \

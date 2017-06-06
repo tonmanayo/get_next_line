@@ -6,7 +6,7 @@
 /*   By: tmack <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/05 15:42:22 by tmack             #+#    #+#             */
-/*   Updated: 2016/10/24 11:38:14 by tmack            ###   ########.fr       */
+/*   Updated: 2016/12/06 17:35:10 by tmack            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,13 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <errno.h>
-# include <stdio.h>
-# include <string.h>
 
-void			tmack_header(void);
 /*
 ** mem
 */
-void			ft_free_2(char **c);
-int				ft_memcmp(const void *original, const void *new, size_t len);
+int				ft_memcmp(const void *original, const void *str, size_t len);
 void			*ft_memcpy(void *dest, const void *source, size_t len);
 void			*ft_memccpy(void *dest, const void *source, int c, size_t len);
-void			*ft_memmove(void *dest, const void *source, size_t len);
 void			*ft_memset(void *destinatino, int int_value, size_t len);
 void			*ft_memchr(const void *haystack, int needle, size_t len);
 void			ft_bzero(void *string, size_t len);
@@ -35,6 +29,7 @@ void			*ft_memalloc(size_t size);
 char			*ft_strnew(size_t size);
 void			ft_memdel(void **pointer);
 void			ft_strdel(char **pointer);
+void			*ft_memmove(void *dst, const void *src, size_t len);
 /*
 ** char
 */
@@ -51,7 +46,7 @@ int				ft_isspace(int c);
 /*
 ** string
 */
-char    		*ft_strndup(const char *s, size_t n);
+char			*ft_strndup(const char *s, size_t n);
 size_t			ft_strlen(const char *source);
 size_t			ft_strnlen(const char *source, size_t max);
 char			*ft_strchr(const char *haystack, int needle);

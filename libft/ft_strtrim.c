@@ -6,7 +6,7 @@
 /*   By: tmack <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/05 16:07:43 by tmack             #+#    #+#             */
-/*   Updated: 2016/07/28 13:14:31 by tmack            ###   ########.fr       */
+/*   Updated: 2016/08/25 09:42:56 by tmack            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s)
 		len--;
 	if (len <= 0)
 		len = 0;
-	str = (char*)malloc(sizeof(char) * (len + 1));
+	str = ft_strnew(len + 1);
 	if (str == NULL)
 		return (NULL);
 	s += i;

@@ -6,25 +6,23 @@
 /*   By: tmack <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/05 15:50:23 by tmack             #+#    #+#             */
-/*   Updated: 2016/06/05 15:50:25 by tmack            ###   ########.fr       */
+/*   Updated: 2016/08/19 12:05:32 by tmack            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memset(void *destination, int int_value, size_t len)
+void			*ft_memset(void *b, int c, size_t len)
 {
-	size_t			i;
-	unsigned char	*location;
-	unsigned char	value;
+	size_t				i;
+	unsigned char		*ptr;
 
-	value = (unsigned char)int_value;
-	location = (unsigned char*)destination;
+	ptr = (unsigned char*)b;
 	i = 0;
 	while (i < len)
 	{
-		location[i] = value;
+		ptr[i] = c;
 		i++;
 	}
-	return (destination);
+	return (b);
 }

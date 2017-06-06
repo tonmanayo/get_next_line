@@ -6,7 +6,7 @@
 /*   By: tmack <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/05 15:34:38 by tmack             #+#    #+#             */
-/*   Updated: 2016/06/05 15:34:41 by tmack            ###   ########.fr       */
+/*   Updated: 2016/08/25 10:44:11 by tmack            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void			*ft_memalloc(size_t size)
 
 	if (size == 0)
 		return (NULL);
-	fresh = malloc(size);
+	fresh = (void *)malloc(sizeof(void) * (size));
 	if (fresh == NULL)
 		return (NULL);
 	ft_bzero(fresh, size);
